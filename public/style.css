@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --background: #f1f2f1;
+  --primary: #3dab39;
+  --secondary: #57503e;
+  --secondary-rgb: 87, 80, 62;
+  --text: #282527;
+  --section: #ffffff;
+  --form: #8a8889;
+  --img-mask: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0.25) 25%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.25) 75%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  min-height: 100vh;
+  height: 100%;
+}
+
+header,
+.footer-top,
+.footer-bottom {
+  padding-inline: 1vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: "Josefin Slab", serif;
+  color: var(--secondary);
+}
+
+/* Base styles for headings */
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+/* Base font sizes */
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 3rem;
+  }
+}
+
+/* NAVBAR */
+.nav-item a,
+.nav-item a:visited,
+.nav-item a:active,
+.nav-item a:focus {
+  color: var(--secondary);
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem !important;
+}
+
+.nav-item a:hover {
+  background-color: rgba(var(--secondary-rgb), 0.5);
+  color: var(--background) !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-brand-text {
+  display: none;
+}
+
+ul .dropdown-menu.show {
+  background-color: var(--section);
+  border: none;
+}
+
+.contact-link {
+  color: var(--background) !important;
+}
+
+.contact-link:hover {
+  filter: saturate(3);
+}
+
+@media (min-width: 768px) {
+  .navbar-brand-text {
+    display: initial;
+  }
+}
+
+/* UTILITY */
+.bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+.bg-background {
+  background-color: var(--background);
+}
+
+.bg-text {
+  background-color: var(--text);
+}
+
+.text-background {
+  color: var(--background) !important;
+}
+
+.text-section {
+  color: var(--section);
+}
+
+.btn-app-primary {
+  background-color: var(--primary);
+  color: var(--background);
+  border-color: var(--primary);
+}
+
+.btn-app-primary:hover {
+  background-color: var(--primary);
+  color: var(--background);
+  border-color: var(--primary);
+  filter: saturate(2);
+}
+
+/* HERO */
+.hero-image {
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: var(--section) !important;
+}
+
+.hero-image h1 {
+  color: var(--section) !important;
+}
+
+.hero-image-text {
+  max-width: max(50rem, 75%);
+}
+
+.hero-image-text p {
+  max-width: max(40rem, 60%);
+}
+
+@media (max-width: 360px) {
+  .hero-image {
+    background-image: var(--img-mask), url("/assets/images/hero-img-xxs.webp");
+  }
+}
+
+@media (min-width: 361px) and (max-width: 390px) {
+  .hero-image {
+    background-image: var(--img-mask), url("/assets/images/hero-img-xs.webp");
+  }
+}
+
+@media (min-width: 391px) and (max-width: 768px) {
+  .hero-image {
+    background-image: var(--img-mask), url("/assets/images/hero-img-sm.webp");
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-image {
+    background-image: var(--img-mask), url("/assets/images/hero-img-md.webp");
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1536px) {
+  .hero-image {
+    background-image: var(--img-mask), url("/assets/images/hero-img-lg.webp");
+  }
+}
+
+@media (min-width: 1537px) {
+  .hero-image {
+    background-image: var(--img-mask), url("/assets/images/hero-img-xl.webp");
+  }
+}
+
+/* SERVICES */
+#landscape-construction {
+  width: 400px;
+  height: 560px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/images/landscape-construction-img.webp");
+  border-radius: 8px;
+}
+
+#lawn-maintenance {
+  width: 400px;
+  height: 560px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/images/lawn-maintenance-img.webp");
+  border-radius: 8px;
+}
+
+#irrigation-systems {
+  width: 400px;
+  height: 560px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/assets/images/irrigation-systems-img.webp");
+  border-radius: 8px;
+}

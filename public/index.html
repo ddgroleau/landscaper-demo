@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      href="/assets/lib/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/style.css" rel="stylesheet" />
+    <title>Your Company Landscaping | Example Website</title>
+  </head>
+  <body class="d-flex flex-column vw-100">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-background">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="/assets/logo.svg" height="60" width="50" alt="Logo" />
+            <span class="navbar-brand-text">Your Company Landscaping</span></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img
+              src="/assets/icons/hamburger-icon.svg"
+              height="50"
+              width="50"
+              alt="Toggle Mobile Menu"
+            />
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mt-5 mt-lg-0 mb-2 mb-lg-0 gap-2">
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  Our Work</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <ul class="dropdown-menu rounded p-0">
+                  <li>
+                    <a class="dropdown-item" href="#">Landscape Construction</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Lawn Maintenance</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Irrigation Systems</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link d-flex align-items-center gap-2 bg-secondary contact-link"
+                  href="#"
+                >
+                  Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="flex-grow-1">
+      <section id="hero">
+        <div
+          class="hero-image d-flex align-items-center justify-content-center"
+        >
+          <div
+            class="hero-image-text d-flex flex-column align-items-center justify-content-center gap-4 gap-lg-5 px-2"
+          >
+            <h1 class="text-center fw-bold">Your Company Landscaping</h1>
+            <p class="fs-3 fw-semibold text-center">
+              Custom landscape construction, irrigation systems, lawn
+              maintenance and more!
+            </p>
+            <button class="btn btn-app-primary fs-3 px-4 fw-medium">
+              Call Now
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="services" class="py-5 px-3">
+        <h2 class="w-100 text-center mt-3">Landscaping Services</h2>
+        <div class="d-flex flex-wrap gap-5 justify-content-center py-5">
+          <div
+            id="landscape-construction"
+            class="m-lg-2 d-flex align-items-end p-5 fs-3 fw-bold text-background"
+          >
+            <span>Landscape Construction</span>
+          </div>
+          <div id="lawn-maintenance" class="m-lg-2"></div>
+          <div id="irrigation-systems" class="m-lg-2"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-secondary d-flex flex-column text-background">
+      <div class="footer-top"></div>
+      <div class="footer-bottom bg-text d-flex justify-content-center py-2">
+        <small> © Your Company Landscaping 2024 </small>
+      </div>
+    </footer>
+    <script src="/assets/lib/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
