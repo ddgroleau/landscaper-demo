@@ -146,31 +146,31 @@ ul .dropdown-menu.show {
 
 @media (max-width: 390px) {
   .hero-image {
-    background-image: url("/assets/images/hero-img-xs.webp");
+    background-image: url("assets/images/hero-img-xs.webp");
   }
 }
 
 @media (min-width: 391px) and (max-width: 768px) {
   .hero-image {
-    background-image: url("/assets/images/hero-img-sm.webp");
+    background-image: url("assets/images/hero-img-sm.webp");
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-image {
-    background-image: url("/assets/images/hero-img-md.webp");
+    background-image: url("assets/images/hero-img-md.webp");
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1536px) {
   .hero-image {
-    background-image: url("/assets/images/hero-img-lg.webp");
+    background-image: url("assets/images/hero-img-lg.webp");
   }
 }
 
 @media (min-width: 1537px) {
   .hero-image {
-    background-image: url("/assets/images/hero-img-xl.webp");
+    background-image: url("assets/images/hero-img-xl.webp");
   }
 }
 
@@ -189,7 +189,7 @@ ul .dropdown-menu.show {
   background-position: center;
   background-repeat: no-repeat;
   background-image: var(--img-mask),
-    url("/assets/images/landscape-construction-img.webp");
+    url("assets/images/landscape-construction-img.webp");
 }
 #landscape-construction:hover {
   scale: 105%;
@@ -211,7 +211,7 @@ ul .dropdown-menu.show {
   background-position: center;
   background-repeat: no-repeat;
   background-image: var(--img-mask),
-    url("/assets/images/lawn-maintenance-img.webp");
+    url("assets/images/lawn-maintenance-img.webp");
 }
 #lawn-maintenance:hover {
   scale: 105%;
@@ -233,7 +233,7 @@ ul .dropdown-menu.show {
   background-position: center;
   background-repeat: no-repeat;
   background-image: var(--img-mask),
-    url("/assets/images/irrigation-systems-img.webp");
+    url("assets/images/irrigation-systems-img.webp");
 }
 #irrigation-systems:hover {
   scale: 105%;
@@ -249,7 +249,7 @@ ul .dropdown-menu.show {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: var(--img-mask), url("/assets/images/testimonial-img.webp");
+  background-image: var(--img-mask), url("assets/images/testimonial-img.webp");
 }
 
 .carousel-item::before {
