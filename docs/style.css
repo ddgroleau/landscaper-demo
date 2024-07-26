@@ -63,6 +63,10 @@ h6,
   box-shadow: none;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
 .navbar-brand-text {
   display: none;
 }
@@ -252,6 +256,7 @@ ul .dropdown-menu.show {
   background-image: var(--img-mask), url("assets/images/testimonial-img.webp");
 }
 
+/* CAROUSEL */
 .carousel-item::before {
   content: "";
   position: absolute;
@@ -266,8 +271,18 @@ ul .dropdown-menu.show {
 
 .carousel-caption {
   position: absolute;
-  bottom: 20px; /* Adjust based on where you want the caption */
+  bottom: 20px;
   left: 0;
   right: 0;
-  z-index: 2; /* Ensure the caption is above the gradient */
+  z-index: 2;
+}
+
+/* FOOTER */
+
+.footer-link {
+  color: var(--background) !important;
+}
+
+.footer-link:hover {
+  opacity: 75%;
 }

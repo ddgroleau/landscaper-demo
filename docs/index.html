@@ -20,7 +20,7 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-background">
         <div class="container-fluid">
-          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="/">
             <img src="assets/logo.svg" height="60" width="50" alt="Logo" />
             <span class="navbar-brand-text">Your Company Landscaping</span></a
           >
@@ -46,14 +46,13 @@
           >
             <ul class="navbar-nav mt-5 mt-lg-0 mb-2 mb-lg-0 gap-2">
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center" href="#">
+                <a class="nav-link d-flex align-items-center" href="#work">
                   Our Work</a
                 >
               </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -62,20 +61,26 @@
                 </a>
                 <ul class="dropdown-menu rounded p-0">
                   <li>
-                    <a class="dropdown-item" href="#">Landscape Construction</a>
+                    <a class="dropdown-item" href="#landscape-construction"
+                      >Landscape Construction</a
+                    >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">Lawn Maintenance</a>
+                    <a class="dropdown-item" href="#lawn-maintenance"
+                      >Lawn Maintenance</a
+                    >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">Irrigation Systems</a>
+                    <a class="dropdown-item" href="#irrigation-systems"
+                      >Irrigation Systems</a
+                    >
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link d-flex align-items-center gap-2 bg-secondary contact-link"
-                  href="#"
+                  href="#contact"
                 >
                   Contact</a
                 >
@@ -166,7 +171,13 @@
                 </div>
               </div>
               <div>
-                <button class="btn btn-app-primary fs-3 px-5 py-3">
+                <button
+                  class="btn btn-app-primary fs-3 px-5 py-3"
+                  type="button"
+                  id="openModal"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal"
+                >
                   Call Now
                 </button>
               </div>
@@ -177,7 +188,13 @@
       <section id="services" class="py-5 px-3">
         <h2 class="w-100 text-center mt-3 fs-1">Landscaping Services</h2>
         <div class="d-flex flex-wrap gap-5 justify-content-center py-5">
-          <div id="landscape-construction-container" class="m-lg-2">
+          <div
+            id="landscape-construction-container"
+            class="m-lg-2"
+            role="button"
+            data-bs-toggle="modal"
+            data-bs-target="#modal"
+          >
             <div
               id="landscape-construction"
               class="d-flex align-items-end p-5 fs-3 fw-medium text-background"
@@ -207,7 +224,13 @@
             </div>
           </div>
 
-          <div id="lawn-maintenance-container" class="m-lg-2">
+          <div
+            id="lawn-maintenance-container"
+            class="m-lg-2"
+            role="button"
+            data-bs-toggle="modal"
+            data-bs-target="#modal"
+          >
             <div
               id="lawn-maintenance"
               class="d-flex align-items-end p-5 fs-3 fw-medium text-background"
@@ -234,7 +257,13 @@
               </div>
             </div>
           </div>
-          <div id="irrigation-systems-container" class="m-lg-2">
+          <div
+            id="irrigation-systems-container"
+            class="m-lg-2"
+            role="button"
+            data-bs-toggle="modal"
+            data-bs-target="#modal"
+          >
             <div
               id="irrigation-systems"
               class="d-flex align-items-end p-5 fs-3 fw-medium text-background"
@@ -474,22 +503,240 @@
           <button
             style="max-width: fit-content"
             class="btn btn-app-primary mt-2"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#modal"
           >
             Submit
           </button>
         </form>
       </section>
     </main>
-    <footer class="bg-secondary d-flex flex-column text-background">
-      <div class="footer-top"></div>
+    <footer class="bg-black d-flex flex-column text-background py-5 px-3">
+      <div class="d-flex w-100 justify-content-center">
+        <div
+          class="footer-top d-flex flex-wrap pb-5 w-100 ps-lg-5"
+          style="max-width: min(90%, 1000px); row-gap: 4rem; column-gap: 8rem"
+        >
+          <div>
+            <strong>NAVIGATION</strong>
+            <div class="d-flex gap-5 mt-4">
+              <div class="d-flex flex-column gap-3">
+                <a class="footer-link" href="/">Home</a>
+                <a class="footer-link" href="#work">Our Work</a>
+                <a class="footer-link" href="#services">Services</a>
+              </div>
+              <div class="d-flex flex-column gap-3">
+                <a class="footer-link" href="#work">About</a>
+                <a class="footer-link" href="#contact">Contact</a>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-3">
+            <strong>SOCIAL</strong>
+            <div class="d-flex gap-3 mt-2">
+              <a
+                class="footer-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#modal"
+                ><svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C6.477 2 2 6.477 2 12C2 17.013 5.693 21.153 10.505 21.876V14.65H8.031V12.021H10.505V10.272C10.505 7.376 11.916 6.105 14.323 6.105C15.476 6.105 16.085 6.19 16.374 6.229V8.523H14.732C13.71 8.523 13.353 9.492 13.353 10.584V12.021H16.348L15.942 14.65H13.354V21.897C18.235 21.236 22 17.062 22 12C22 6.477 17.523 2 12 2Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+              <a
+                class="footer-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#modal"
+              >
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 3C5.239 3 3 5.239 3 8V16C3 18.761 5.239 21 8 21H16C18.761 21 21 18.761 21 16V8C21 5.239 18.761 3 16 3H8ZM18 5C18.552 5 19 5.448 19 6C19 6.552 18.552 7 18 7C17.448 7 17 6.552 17 6C17 5.448 17.448 5 18 5ZM12 7C14.761 7 17 9.239 17 12C17 14.761 14.761 17 12 17C9.239 17 7 14.761 7 12C7 9.239 9.239 7 12 7ZM12 9C10.3432 9 9 10.3432 9 12C9 13.6569 10.3432 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3432 13.6569 9 12 9Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+              <a
+                class="footer-link"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#modal"
+              >
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 3C4.35503 3 3 4.35503 3 6V18C3 19.645 4.35503 21 6 21H18C19.645 21 21 19.645 21 18V6C21 4.35503 19.645 3 18 3H6ZM12 7H14C14 8.005 15.471 9 16 9V11C15.395 11 14.668 10.7342 14 10.2852V14C14 15.654 12.654 17 11 17C9.346 17 8 15.654 8 14C8 12.346 9.346 11 11 11V13C10.448 13 10 13.449 10 14C10 14.551 10.448 15 11 15C11.552 15 12 14.551 12 14V7Z"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-3">
+            <strong>CONTACT DETAILS</strong>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex gap-4">
+                <svg
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.142 22C10.7586 22 9.45863 21.7375 8.24197 21.2125C7.0253 20.6875 5.96697 19.975 5.06697 19.075C4.16697 18.175 3.45447 17.1167 2.92947 15.9C2.40447 14.6833 2.14197 13.3833 2.14197 12C2.14197 10.6167 2.40447 9.31667 2.92947 8.1C3.45447 6.88333 4.16697 5.825 5.06697 4.925C5.96697 4.025 7.0253 3.3125 8.24197 2.7875C9.45863 2.2625 10.7586 2 12.142 2C13.5253 2 14.8253 2.2625 16.042 2.7875C17.2586 3.3125 18.317 4.025 19.217 4.925C20.117 5.825 20.8295 6.88333 21.3545 8.1C21.8795 9.31667 22.142 10.6167 22.142 12C22.142 13.3833 21.8795 14.6833 21.3545 15.9C20.8295 17.1167 20.117 18.175 19.217 19.075C18.317 19.975 17.2586 20.6875 16.042 21.2125C14.8253 21.7375 13.5253 22 12.142 22ZM12.142 17.5C12.892 16.75 13.5586 15.975 14.142 15.175C14.642 14.4917 15.1003 13.7417 15.517 12.925C15.9336 12.1083 16.142 11.3 16.142 10.5C16.142 9.4 15.7503 8.45833 14.967 7.675C14.1836 6.89167 13.242 6.5 12.142 6.5C11.042 6.5 10.1003 6.89167 9.31697 7.675C8.53363 8.45833 8.14197 9.4 8.14197 10.5C8.14197 11.3 8.3503 12.1083 8.76697 12.925C9.18363 13.7417 9.64197 14.4917 10.142 15.175C10.7253 15.975 11.392 16.75 12.142 17.5ZM12.142 12C11.7253 12 11.3711 11.8542 11.0795 11.5625C10.7878 11.2708 10.642 10.9167 10.642 10.5C10.642 10.0833 10.7878 9.72917 11.0795 9.4375C11.3711 9.14583 11.7253 9 12.142 9C12.5586 9 12.9128 9.14583 13.2045 9.4375C13.4961 9.72917 13.642 10.0833 13.642 10.5C13.642 10.9167 13.4961 11.2708 13.2045 11.5625C12.9128 11.8542 12.5586 12 12.142 12Z"
+                    fill="#E8EAED"
+                  />
+                </svg>
+                <div class="d-flex flex-column gap-1">
+                  <span class="fw-semibold">Your Company Landscape Design</span>
+                  <span>123 Main St</span>
+                  <span>Your City, CT 12345</span>
+                </div>
+              </div>
+              <div class="d-flex gap-4">
+                <svg
+                  width="29"
+                  height="29"
+                  viewBox="0 0 29 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_47_42)">
+                    <path
+                      d="M13.5234 24.1594C12.2958 22.9318 11.3505 21.4513 10.6876 19.7179C10.0247 17.9845 9.69321 16.1357 9.69321 14.1715C9.69321 12.2074 10.0247 10.3586 10.6876 8.62517C11.3505 6.89178 12.2958 5.41128 13.5234 4.18366C13.7001 4.00688 13.9064 3.91849 14.1421 3.91849C14.3778 3.91849 14.584 4.00688 14.7608 4.18366L17.1473 6.57015C17.2848 6.70764 17.3609 6.87705 17.3756 7.07838C17.3904 7.27971 17.3437 7.45403 17.2357 7.60134L15.5563 10.0468C15.4188 10.2235 15.2813 10.3512 15.1438 10.4298C15.0063 10.5083 14.859 10.5476 14.7019 10.5476L11.8293 10.5624C11.6623 11.1221 11.5445 11.7065 11.4757 12.3154C11.407 12.9243 11.3775 13.5479 11.3873 14.1863C11.3873 14.7952 11.4241 15.3967 11.4978 15.9909C11.5715 16.585 11.6869 17.1767 11.844 17.766H14.6135C14.7903 17.766 14.972 17.8151 15.1586 17.9133C15.3452 18.0115 15.4974 18.1392 15.6152 18.2963L17.2357 20.7417C17.3339 20.9185 17.3756 21.1027 17.3609 21.2942C17.3462 21.4857 17.275 21.6453 17.1473 21.7729L14.7608 24.1594C14.584 24.3362 14.3778 24.4246 14.1421 24.4246C13.9064 24.4246 13.7001 24.3362 13.5234 24.1594ZM12.3891 8.88297H14.3336L15.4679 7.24779L14.1568 5.9367C13.8033 6.38846 13.4743 6.85495 13.1698 7.33618C12.8654 7.8174 12.6051 8.333 12.3891 8.88297ZM12.3891 19.4307C12.6051 19.9806 12.8629 20.5036 13.1625 20.9995C13.462 21.4955 13.7984 21.9595 14.1716 22.3917L15.4679 21.0953L14.3631 19.4307H12.3891Z"
+                      fill="#E8EAED"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_47_42">
+                      <rect
+                        width="20"
+                        height="20"
+                        fill="white"
+                        transform="translate(14.1421 0.0292969) rotate(45)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal"
+                  class="footer-link"
+                  >(555) 555-5555</a
+                >
+              </div>
+              <div class="d-flex align-items-center gap-4">
+                <svg
+                  width="21"
+                  height="20"
+                  viewBox="0 0 21 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.47526 16.6666C3.01693 16.6666 2.62457 16.5034 2.29818 16.177C1.97179 15.8506 1.80859 15.4583 1.80859 14.9999V4.99992C1.80859 4.54159 1.97179 4.14922 2.29818 3.82284C2.62457 3.49645 3.01693 3.33325 3.47526 3.33325H16.8086C17.2669 3.33325 17.6593 3.49645 17.9857 3.82284C18.3121 4.14922 18.4753 4.54159 18.4753 4.99992V14.9999C18.4753 15.4583 18.3121 15.8506 17.9857 16.177C17.6593 16.5034 17.2669 16.6666 16.8086 16.6666H3.47526ZM10.1419 10.8333L3.47526 6.66659V14.9999H16.8086V6.66659L10.1419 10.8333ZM10.1419 9.16658L16.8086 4.99992H3.47526L10.1419 9.16658ZM3.47526 6.66659V4.99992V14.9999V6.66659Z"
+                    fill="#E8EAED"
+                  />
+                </svg>
+                <a
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal"
+                  class="footer-link"
+                  >info@yourcompany.com</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="footer-bottom bg-black d-flex justify-content-center py-2">
-        <small> © Your Company Landscaping 2024 </small>
+        <small id="copyright"> © Your Company Landscaping </small>
       </div>
     </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modal"
+      tabindex="-1"
+      aria-labelledby="modalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header px-4">
+            <p class="modal-title pe-2" style="font-size: 2rem" id="modalLabel">
+              I hope you are enjoying this sample site!
+            </p>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              style="margin-top: -4rem"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body px-4">
+            <p>
+              Thank you for taking the time to visit this sample site. If you
+              are enjoying the site and want to find out what I can do for you,
+              call me at the link below, or visit my
+              <a href="https://dangroleauwebdevelopment.com" target="_blank"
+                >website</a
+              >
+              to learn more.
+            </p>
+            <i>- Dan Groleau</i>
+          </div>
+          <div class="modal-footer px-4">
+            <a class="btn btn-app-primary" href="tel:14017533691">Call Now</a>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.getElementById(
+        "copyright"
+      ).innerText = `© Your Company Landscaping ${new Date().getFullYear()}`;
+    </script>
   </body>
 </html>
