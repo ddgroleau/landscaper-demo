@@ -141,6 +141,18 @@ ul .dropdown-menu.show {
 #hero {
   height: calc(100vh - 70px);
 }
+
+#hero h1 {
+  font-size: calc(2rem + 1vw);
+  max-width: 40rem;
+}
+
+@media (min-width: 768px) {
+  #hero h1 {
+    font-size: calc(3rem + 1vw);
+  }
+}
+
 .hero-image {
   height: 100%;
   background-size: cover;
