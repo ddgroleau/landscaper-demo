@@ -139,11 +139,11 @@ ul .dropdown-menu.show {
 /* HERO */
 
 #hero {
-  height: calc(100vh - 70px);
+  height: calc(100vh - 86px);
 }
 
 #hero h1 {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(2.5rem + 1vw);
   max-width: 40rem;
 }
 
