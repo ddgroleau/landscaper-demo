@@ -455,17 +455,33 @@
         <form
           class="d-flex flex-column gap-2 w-100 mb-4"
           style="max-width: min(90%, 32rem)"
+          method="POST"
+          action="https://api.web3forms.com/submit"
         >
           <h2 class="w-100 text-center mt-3 fs-1 text-section">
             Contact Us Today
           </h2>
+          <span
+            class="text-background opacity-50 text-center fw-bold"
+            style="display: none"
+            id="form-success"
+            >Thanks for your submission, we'll get back to you shortly.</span
+          >
+          <input
+            type="hidden"
+            name="form"
+            value="Landscaper Demo Contact Form"
+          />
           <div class="mb-3">
             <label for="name" class="form-label text-section">Name</label>
             <input
               type="text"
+              name="name"
               class="form-control"
               id="name"
               placeholder="Enter your name"
+              title="Name is required"
+              required
             />
           </div>
           <div class="mb-3">
@@ -474,9 +490,12 @@
             >
             <input
               type="email"
+              name="email"
               class="form-control"
               id="email"
               placeholder="name@example.com"
+              title="Email is required"
+              required
             />
           </div>
           <div class="mb-3">
@@ -486,22 +505,35 @@
             <input
               type="tel"
               class="form-control"
+              name="phone"
               id="phone"
+              pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}"
+              title="Phone number should be in the format (XXX) XXX-XXXX"
               placeholder="(123) 456-7891"
+              required
             />
           </div>
           <div class="mb-3">
             <label for="message" class="form-label text-section"
               >Your Message (Optional)</label
             >
-            <textarea class="form-control" id="message" rows="3"></textarea>
+            <textarea
+              name="message"
+              class="form-control"
+              id="message"
+              rows="3"
+            ></textarea>
           </div>
+          <input
+            type="hidden"
+            name="access_key"
+            value="0f1241b1-5da2-4b38-8ab8-5880bed8e415"
+          />
+          <input type="hidden" name="redirect" id="contact-redirect" />
           <button
             style="max-width: fit-content"
             class="btn btn-app-primary mt-2"
-            type="button"
-            data-bs-toggle="modal"
-            data-bs-target="#modal"
+            type="submit"
           >
             Submit
           </button>
@@ -733,6 +765,16 @@
       document.getElementById(
         "copyright"
       ).innerText = `© Your Company Landscaping ${new Date().getFullYear()}`;
+
+      document
+        .getElementById("contact-redirect")
+        .setAttribute("value", window.origin + "?submitted=true/#contact");
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const success = urlParams.get("submitted");
+      if (success) {
+        document.getElementById("form-success").style = "";
+      }
     </script>
   </body>
 </html>
