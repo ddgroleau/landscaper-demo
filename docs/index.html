@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/avicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -766,9 +766,13 @@
         "copyright"
       ).innerText = `© Your Company Landscaping ${new Date().getFullYear()}`;
 
+      let origin = window.origin;
+      if (origin.includes("github")) {
+        origin = "https://ddgroleau.github.io/builder-demo";
+      }
       document
         .getElementById("contact-redirect")
-        .setAttribute("value", window.origin + "?submitted=true/#contact");
+        .setAttribute("value", origin + "?submitted=true/#contact");
 
       const urlParams = new URLSearchParams(window.location.search);
       const success = urlParams.get("submitted");
